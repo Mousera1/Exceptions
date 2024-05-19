@@ -26,6 +26,7 @@ Classes: The private modifier cannot be applied to top-level classes. It can be 
 Methods and Variables: Private methods and variables are accessible only within the same class.
 Significance: This modifier provides the most restrictive access, ensuring that methods and variables are encapsulated within the class and not accessible from outside. This is key for maintaining encapsulation and hiding implementation details.
 Example:
+
 public class PublicClass {
     public void publicMethod() {
         System.out.println("Public method");
