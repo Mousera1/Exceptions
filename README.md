@@ -70,11 +70,12 @@ o	It is an event that occurs during the execution of the program and interrupts 
 Types:
 In Java, there are two types of exceptions:
 1.	Checked exceptions: These are the exceptions that are checked at compile time. Example: IOException, File not found exception
-2.	Unchecked exceptions: example: ArrayIndexOutOfBoundsException (This exception is thrown when we attempt to access an array index that is out of bounds.), NullPointerException (This exception is thrown when we attempt to access a null object reference.), ArithmeticException (This exception is thrown when we attempt to divide by zero or perform an invalid arithmetic operation.)
+2.	Unchecked exceptions: Example: ArrayIndexOutOfBoundsException (This exception is thrown when we attempt to access an array index that is out of bounds.), NullPointerException (This exception is thrown when we attempt to access a null object reference.), ArithmeticException (This exception is thrown when we attempt to divide by zero or perform an invalid arithmetic operation.)
 Error:
 Errors are typically caused by mistakes in the program’s code or by external factors such as hardware or network issues. 
 Example: a)syntax errors- Syntax errors occur when the program’s code violates the rules of the programming language. 
 b)runtime errors- Runtime errors occur when the program tries to execute an invalid operation or encounters an unexpected situation, c)logical errors - Logical errors occur when the program produces incorrect results due to a flaw in the program’s design or implementation.
+
 3. What is the difference between checked Exception and unchecked Exception?
 Checked Exceptions
 •	They occur at compile time.
@@ -91,14 +92,11 @@ Unchecked Exceptions
 •	These are not a part of the ‘Exception’ class since they are runtime exceptions.
 •	The JVM doesn’t require the exception to be caught and handled.
 •	Example of Unchecked Exceptions- ‘No Such Element Exception’
+
 4. Write a Java program that reads user input for two integers and performs division. Handle
 the exception that is thrown when the second number is zero, and display an error
 message to the user.
-
-Exception in thread "main" java.lang.ArithmeticException: / by zero
-	at javapackage.ArithmeticException.main(ArithmeticException.java:9)
-package javapackage;
-
+Program:
 public class ArithmeticException {
 
 	public static void main(String[] args) {
@@ -115,9 +113,13 @@ public class ArithmeticException {
 	}
 	}
 }
-Output: cannot divide by zero
-5. Write the code of ArrayIndexOutOfBoundsException &
-StringIndexOutOfBoundsException?
+
+Output error message: Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at javapackage.ArithmeticException.main(ArithmeticException.java:9)
+package javapackage;
+Output after try and catch: cannot divide by zero
+
+5. Write the code of ArrayIndexOutOfBoundsException & StringIndexOutOfBoundsException?
 ArrayIndexOutOfBoundsException:
 package javapackage;
 
@@ -160,6 +162,7 @@ Output: Exception in thread "main" java.lang.StringIndexOutOfBoundsException: St
 	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
 	at java.base/java.lang.String.charAt(String.java:711)
 	at javapackage.Stringindexoutofbound.main(Stringindexoutofbound.java:9)
+ 
 6. You are building a login system for a website using Java. If the user enters an incorrect password, you want to display a message informing them of the error. How would you use exception handling to handle this situation?
 package javapackage;
 
@@ -246,6 +249,7 @@ public class AgeValidator {
 }
 Output: Enter your age: 19
 Age is valid.
+
 8. Implement exception handling in a Java program that reads data from a file. If the file does not exist, throw a "FileNotFoundException" and display an error message to the user.
 package javapackage;
 
@@ -257,7 +261,7 @@ public class Filenotfoundexception {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		File file = new File ("C:\\Users\\mouri\\OneDrive\\Desktop\\File");
+		File file = new File ("C:\\Users\\mouri\\OneDrive\\Desktop\\File"); //After deleting the created file
 		
 		
 			FileReader fr = new FileReader(file);
